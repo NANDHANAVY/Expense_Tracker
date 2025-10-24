@@ -25,7 +25,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     Custom user model using email as the unique identifier.
     """
     email_address = models.EmailField(unique=True)
-    # username = models.CharField(max_length=150, unique=True, blank=True, null=True) ❌ remove this if unused
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
